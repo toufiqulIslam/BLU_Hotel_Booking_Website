@@ -1,0 +1,85 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="custom.css">
+	<title>project </title>
+	<style>
+	.center
+	{
+		margin: auto;
+		width: 60%;
+		padding: 10px;
+	}
+</style>
+</head>
+<body >
+	<br/>
+	<form method="POST">
+		<div class="container center">
+			<div class="row">
+				<div class="col-xs-8">
+					<fieldset>
+						<legend align="center"> <h3>EDIT A HOTEL INFORMATION</h3></legend>
+						<br/><br/>
+						<fieldset>
+							<legend> <font color="#e60000"><h3>HOTEL INFORMATION</h3></font> </legend>
+							<div class="form-row">
+								<div class="col">
+									<label for="id" ><h4>Hotel ID : <%=hotel.id%></h4></label> <!-- Hotel ID label -->
+								</div>
+								<div class="col">
+									<label for="name" ><h4>Name</h4></label> <!-- first name label -->
+									<input type="text" class="form-control form-control-lg" name="name" placeholder="Name" id="name" value="<%=hotel.hotelName%>" required>
+								</div>
+								<div class="col">
+									<label for="location"><h4>Location</h4></label> <!-- location label -->
+									<input type="text" class="form-control form-control-lg" name="location" placeholder="Location" id="location" value="<%=hotel.hotelAddress%>" required> <!-- location text bar --> 
+								</div>
+
+							</div>
+							<br/>
+							<div>
+								<label for="Room no"><h4>Suite</h4></label>
+								<input type="number" class="form-control form-control-lg" name="suite" id="suite" value="<%=hotel.suite%>" required>
+							</div>
+							<div>
+								<label for="Room no"><h4>Family</h4></label>
+								<input type="number" class="form-control form-control-lg" name="family" id="family" value="<%=hotel.family%>" required>
+							</div>
+							<div>
+								<label for="Room no"><h4>Deluxe</h4></label>
+								<input type="number" class="form-control form-control-lg" name="deluxe" id="deluxe" value="<%=hotel.deluxe%>" required>
+							</div>
+							<div>
+								<label for="Room no"><h4>Classic</h4></label>
+								<input type="number" class="form-control form-control-lg" name="classic" id="classic" value="<%=hotel.classic%>" required>
+							</div>
+							<div>
+								<label for="Room no"><h4>Superior</h4></label>
+								<input type="number" class="form-control form-control-lg" name="superior" id="superior" value="<%=hotel.superior%>" required>
+							</div>
+							<div>
+								<label for="Room no"><h4>Luxury</h4></label>
+								<input type="number" class="form-control form-control-lg" name="luxury" id="luxury" value="<%=hotel.luxury%>" required>
+							</div>
+							<br/>
+							<div>
+								<input type="submit" class="btn btn-lg btn-success" name="create" value="Update"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>    
+		</body>
+		</html>
