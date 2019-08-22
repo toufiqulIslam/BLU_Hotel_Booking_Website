@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel Details</title>
+</head>
+<body>
+	<h1>Hotel Details</h1>
+	
+	<a href="/receptionist">Back</a> | 
+	<a href="/logout">Logout</a> 
+
+	<br/>
+	<br/>
+
+	<table border="1">
+		<tr>
+			<td>ID</td>
+			<td>Hotel Name</td>
+			<td>Location</td>
+			<td>Suite</td>
+			<td>Deluxe</td>
+			<td>Family</td>
+			<td>Classic</td>
+			<td>Superior</td>
+			<td>Luxury</td>
+			<td>Status</td>
+		</tr>
+
+		<% for(var i=0; i < List.length; i++){ %>
+
+		<tr>
+			<td><%= List[i].id %></td>
+			<td><%= List[i].hotelName %></td>
+			<td><%= List[i].hotelAddress %></td>
+			<td><%= List[i].suite %></td>
+			<td><%= List[i].deluxe %></td>
+			<td><%= List[i].family %></td>
+			<td><%= List[i].classic %></td>
+			<td><%= List[i].superior %></td>
+			<td><%= List[i].luxury %></td>
+			<td><%= List[i].status %></td>
+
+			<td>
+				<a href="/receptionist/editHotel/<%= List[i].id %>">EDIT</a> | 
+				<a href="/receptionist/deleteHotel/<%= List[i].id %>">DELETE</a>
+			</td>
+			<td><a href="/receptionist/<%= List[i].status %>/<%= List[i].id %>"><%= List[i].status %></td>
+		</tr>
+
+		<% } %>
+	</table>
+
+</body>
+</html>

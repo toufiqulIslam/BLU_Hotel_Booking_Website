@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Details</title>
+</head>
+<body>
+	<h1>Booking Details</h1>
+	
+	<a href="/receptionist">Back</a> | 
+	<a href="/logout">Logout</a> 
+
+	<br/>
+	<br/>
+
+	<table border="1">
+		<tr>
+			<td>ID</td>
+			<td>User ID</td>
+			<td>Hotel ID</td>
+			<td>Name</td>
+			<td>Location</td>
+			<td>Room Type</td>
+			<td>Check In</td>
+			<td>Check Out</td>
+			<td>Paid</td>
+			<td>Due</td>
+			<td>Status</td>
+		</tr>
+
+		<% for(var i=0; i < List.length; i++){ %>
+
+		<tr>
+			<td><%= List[i].id %></td>
+			<td><%= List[i].userID %></td>
+			<td><%= List[i].hotelid %></td>
+			<td><%= List[i].hName %></td>
+			<td><%= List[i].hAddress %></td>
+			<td><%= List[i].roomType %></td>
+			<td><%= List[i].checkin %></td>
+			<td><%= List[i].checkout %></td>
+			<td><%= List[i].paid %></td>
+			<td><%= List[i].due %></td>
+			<td><%= List[i].status %></td>
+
+			
+			<!-- <td><a href="/home/booking/<%= List[i].status %>/<%= List[i].id %>"><%= List[i].status %></td> -->
+		</tr>
+
+		<% } %>
+	</table>
+
+</body>
+</html>
